@@ -1,28 +1,44 @@
+const startMinutes = 25;
+let time = startMinutes * 60;
+const countdownEl = document.getElementById('countdown');
+
 
 
 function start() {
-    let seconds = 59;
-    let minutes = 24;
-    document.getElementById("seconds").innerHTML = seconds;
-    document.getElementById("minutes").innerHTML = minutes + " :";
+    setInterval(updateCountdown, 1000);
+    function updateCountdown() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+    
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        
+        countdownEl.innerHTML = `${minutes} : ${seconds}`;
+        time--;
 
-    let workMinute = minutes - 1;
-
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer)
-    })
-
+    }
     
 }
 
 function restart() {
-    let minutes = 25;
-    let seconds = '00'
-
-    document.getElementById("seconds").innerHTML = seconds;
-    document.getElementById("minutes").innerHTML = minutes + " :";
+    countdownEl.innerHTML = 25;
+    setTimeout(updateCountdown);
 }
+
+// function restart() {
+//     setInterval(Countdown, 1000);
+//     function Countdown() {
+//         const minutes = 25;
+//         let seconds = 0;
+    
+//         seconds = seconds < 10 ? '0' + seconds : seconds;
+        
+//         countdownEl.innerHTML = `${minutes} : ${seconds}`;
+//         clearTimeout(countdown);
+//     }
+// }
+
+
+
 
 
 
