@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 *, *::after, *::before {
     box-sizing: border-box;
-    font-family: Gotham Rounded, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+
+div {
+    width: 35px;
+    height: 5px;
+    background-color: white;  
+    backdrop-filter: blur(1px);
+    margin: 6px 0;
+    border-radius: 5px;
+  }
 
 body {
     background: linear-gradient(to right, hsl(60, 68%, 61%), hsl(150, 96%, 47%));
+    font-family: 'Roboto', sans-serif;
 }
 
 .titleContainer {
@@ -24,7 +37,7 @@ body {
     
 }
 h1 {
-    color:rgba(21, 9, 9, 0.234);
+    color:rgba(8, 8, 8, 0.234);
     margin-top: 20px;
 }
 
@@ -33,21 +46,27 @@ h1 {
     margin-top: 100px;
     margin-bottom: 25px;
     border-radius: 25px;
-    background-color: rgba(76, 71, 71, 0.203);  
+    background-color: rgba(52, 49, 49, 0.203);  
     backdrop-filter: blur(5px);
     padding: 20px; 
     width: 350px;
-    height: 120px; 
-    font-size: 20px;
-    
+    height: 120px;  
+    font-size: 50px;
+    font-weight: bold;
+    color:rgba(222, 188, 188, 0.925);
     text-align: center;
+    
 }
 
-.button {
-    margin:0;
-    
-    top: 150%;
-    border-radius: 25px;
+p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button {   
+    border-radius: 20px;
     width: 150px;
     height: 60px;
     border:none;
@@ -55,6 +74,9 @@ h1 {
     backdrop-filter: blur(5px);
     cursor: pointer;
     font-size: 20px;
+    font-weight: bold;
+    color:rgba(222, 188, 188, 0.925);
+    
 }
 
 
